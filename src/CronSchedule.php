@@ -56,7 +56,7 @@ class CronSchedule
     private $_cronYears = [];
 
     // The language table
-    private $_lang = false;
+    private $_lang = [];
 
     /**
      * Minimum and maximum years to cope with the Year 2038 problem in UNIX. We run PHP which most likely runs on a UNIX environment so we
@@ -793,7 +793,6 @@ class CronSchedule
     {
         switch ($language) {
             case 'en':
-                $this->_lang = [];
                 $this->_lang['elemMin: at_the_hour'] = 'at the hour';
                 $this->_lang['elemMin: after_the_hour_every_X_minute'] = 'every minute';
                 $this->_lang['elemMin: after_the_hour_every_X_minute_plural'] = 'every @1 minutes';
